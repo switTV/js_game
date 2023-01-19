@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body main {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    place-content: center;
+}
+
+main .container-game {
+    background-color: #FFC482;
+    height: 400px;
+    border-radius: 5px 5px 30px 5px;
+    display: grid;
+}
+
+main .container-game canvas {
+    background-color: #66999B;
+    margin: 10px;
+
+    border-radius: 5px 5px 30px 5px;
+}
+
+main .container-game .down-part {
+    width: 100%;
+    height: 249px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .container-game .down-part .btns button{
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-color: #2B3A67;
+    color: #fff;
+    gap: 10px;
+}
+
+main .container-game .down-part .btns button:hover{
+    border: #fff 1px solid;
+}
+
+main .container-game .down-part .btns{
+    width: 120px;
+    height: 80px;
+    display: grid; 
+    grid-template-columns: .5fr .5fr .5fr; 
+    grid-template-rows: 1fr minmax(50px, 1fr); 
+    grid-auto-flow: row;
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". button-top ."
+      "button-left button-bottom button-right"
+    ;
+}
+
+#btn-left { grid-area: button-left; }
+#btn-top { grid-area: button-top; }
+#btn-right { grid-area: button-right; }
+#btn-bottom { grid-area: button-bottom; }
